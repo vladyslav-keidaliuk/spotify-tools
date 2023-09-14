@@ -1,5 +1,10 @@
 # spotify-tools
 
+
+Maybe someone like me wants to make a public playlist from a "favorite" playlist,
+but alas it is impossible in the application,
+so I created a function "copy_favorite_tracks_to_public_playlist".
+
 Currently, there are the following features:
 
 - creating a public playlist from a favourite

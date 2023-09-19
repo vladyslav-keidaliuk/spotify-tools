@@ -21,3 +21,8 @@ which it adds to each track and accordingly the search by name disappears.
 
 - The function that export titles of tracks from public playlist to .txt file 
 with sorting by alphabet or not (as you want)
+
+
+After cloning the project, install the required libraries using pip :
+<br> 
+**pip install -r requirements.txt**

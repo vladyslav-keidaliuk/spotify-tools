@@ -5,6 +5,11 @@ CLIENT_ID = 'YOUR_CLIENT_ID'
 CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
 REDIRECT_URI = 'http://localhost:8000/callback'
 
+root_account = {
+    "client_id": CLIENT_ID,
+    "client_secret": CLIENT_SECRET,
+}
+
 def auth():
     try:
         client_credentials_manager = SpotifyClientCredentials(CLIENT_ID, CLIENT_SECRET)

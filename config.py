@@ -1,14 +1,12 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import config_helper
 
-CLIENT_ID = 'YOUR_CLIENT_ID'
-CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
-REDIRECT_URI = 'http://localhost:8000/callback'
+config = config_helper.get_data_from_config_files()
 
-root_account = {
-    "client_id": CLIENT_ID,
-    "client_secret": CLIENT_SECRET,
-}
+CLIENT_ID = config.get('CLIENT_ID')
+CLIENT_SECRET = config.get('CLIENT_SECRET')
+REDIRECT_URI = config.get('REDIRECT_URI')
 
 def auth():
     try:

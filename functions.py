@@ -244,7 +244,7 @@ def get_token_for_1_account(account_1):
             scope='user-library-read user-library-modify',
             client_id=account_1['client_id'],
             client_secret=account_1['client_secret'],
-            redirect_uri='http://localhost:8000/callback',
+            redirect_uri=account_1['redirect_uri'],
             cache_path=cache_path_first_account
         )
     except Exception as e:
@@ -259,7 +259,7 @@ def get_token_for_2_account(account_2):
             scope='user-library-read user-library-modify',
             client_id=account_2['client_id'],
             client_secret=account_2['client_secret'],
-            redirect_uri='http://localhost:8001/callback',
+            redirect_uri=account_2['redirect_uri'],
             cache_path=cache_path_second_account
         )
     except Exception as e:
@@ -272,7 +272,7 @@ def copy_from_1_to_2_account_all_favourite_tracks(account_1, account_2):
         sp_oauth_first_account = SpotifyOAuth(
             client_id=account_1['client_id'],
             client_secret=account_1['client_secret'],
-            redirect_uri='http://localhost:8001/callback',
+            redirect_uri=account_1['redirect_uri'],
             scope='user-library-read user-library-modify',
             cache_path=".cache-first_account"  # The path to the cache file for the first account
         )
@@ -286,7 +286,7 @@ def copy_from_1_to_2_account_all_favourite_tracks(account_1, account_2):
             sp_oauth_second_account = SpotifyOAuth(
                 client_id=account_2['client_id'],
                 client_secret=account_2['client_secret'],
-                redirect_uri='http://localhost:8002/callback',
+                redirect_uri=account_2['redirect_uri'],
                 scope='user-library-read user-library-modify',
                 cache_path=".cache-second_account"  # The path to the cache file for the second account
             )

@@ -18,7 +18,6 @@ from functions import (copy_favorite_tracks_to_public_playlist,
 # copy_favorite_tracks_to_public_playlist("LINK_ON_PUBLIC_PLAYLIST")
 
 
-
 # ====2====
 
 # Instead of 'Playlist' you can enter something else, as a result you will have playlists:
@@ -56,11 +55,13 @@ from functions import (copy_favorite_tracks_to_public_playlist,
 account_1 = {
     "client_id": 'YOUR_CLIENT_ID',
     "client_secret": 'YOUR_CLIENT_SECRET',
+    "redirect_uri": 'YOUR_REDIRECT_URI',
 }
 
 account_2 = {
     "client_id": 'YOUR_CLIENT_ID',
     "client_secret": 'YOUR_CLIENT_SECRET',
+    "redirect_uri": 'YOUR_REDIRECT_URI',
 }
 
 
